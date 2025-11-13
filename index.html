@@ -1221,9 +1221,9 @@
         </button>
       </div>
       <div class="attack-modes-row">
-        <button id="mode1000" class="attack-mode-btn">
-          <img src="https://i.ibb.co/nNy17WfL/IMG-6065.png" alt="Mini Gun - 1000 tours" class="attack-mode-image">
-          <div>1,000 tours</div>
+        <button id="mode750" class="attack-mode-btn"> <!-- CORRECTION : mode1000 devient mode750 -->
+          <img src="https://i.ibb.co/nNy17WfL/IMG-6065.png" alt="Mini Gun - 750 tours" class="attack-mode-image">
+          <div>750 tours</div> <!-- CORRECTION : 1000 tours devient 750 tours -->
         </button>
         <button id="mode2000" class="attack-mode-btn">
           <img src="https://i.ibb.co/JMPfpWV/IMG-5851.png" alt="Galaxie - 2000 tours" class="attack-mode-image">
@@ -2402,7 +2402,7 @@
     document.getElementById("mode10").addEventListener("click", () => setAttackMode(10));
     document.getElementById("mode30").addEventListener("click", () => setAttackMode(30));
     document.getElementById("mode100").addEventListener("click", () => setAttackMode(100));
-    document.getElementById("mode1000").addEventListener("click", () => setAttackMode(1000));
+    document.getElementById("mode750").addEventListener("click", () => setAttackMode(750)); // CORRECTION : mode1000 devient mode750
     document.getElementById("mode2000").addEventListener("click", () => setAttackMode(2000));
     document.getElementById("mode5000").addEventListener("click", () => setAttackMode(5000));
 
@@ -2424,7 +2424,7 @@
       }
       
       if (e.key >= '1' && e.key <= '7') {
-        const modes = [1, 10, 30, 100, 1000, 2000, 5000];
+        const modes = [1, 10, 30, 100, 750, 2000, 5000]; // CORRECTION : 1000 devient 750
         const index = parseInt(e.key) - 1;
         if (index < modes.length) {
           setAttackMode(modes[index]);
